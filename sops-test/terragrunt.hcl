@@ -1,5 +1,6 @@
 locals {
-  secret_vars = yamldecode(sops_decrypt_file(find_in_parent_folders("secrets.yaml")))
+  secrets = get_env(DIGGER_GENERATE_PROJECT, "false") == "true" ? {} : yamldecode(sops_decrypt_file("secrets.yaml"))
+
 }
 
 terraform {
