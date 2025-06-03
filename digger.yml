@@ -4,6 +4,7 @@ generate_projects:
     createProjectName: true
     createWorkspace: true
     defaultWorkflow: default
+    cascadeDependencies: false 
 workflows:
   default:
     plan:
