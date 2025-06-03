@@ -11,5 +11,5 @@ dependency "parent" {
 }
 
 terraform {
-  source = "git::https://github.com/example-huge-tg-modules/svc2-cmp3.git//?ref=v1.0.0"
+  source = "git::https://github.com/digger-external-repos/svc2-cmp3.git//?ref=v1.0.0"
 }
