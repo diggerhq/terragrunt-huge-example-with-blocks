@@ -1,3 +1,7 @@
+locals {
+  secret_vars = yamldecode(sops_decrypt_file(find_in_parent_folders("secrets.yaml")))
+}
+
 secret_vars = yamldecode(sops_decrypt_file(find_in_parent_folders("secrets.yaml")))
 
 terraform {
