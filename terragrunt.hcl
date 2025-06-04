@@ -18,7 +18,10 @@ generate "provider" {
   if_exists = "overwrite"
   contents  = <<-EOT
     terraform {
-      required_version = ">= 1.6.0"
+      required_version = ">= 1.5.5"
     }
+
+    resource "null_resource" "test" {}
+
   EOT
 }
