@@ -10,6 +10,3 @@ dependency "parent" {
   mock_outputs_allowed_terraform_commands = ["init", "plan", "apply"]
 }
 
-terraform {
-  source = "git::https://github.com/digger-external-repos/env1.git//?ref=v1.0.0"
-}
