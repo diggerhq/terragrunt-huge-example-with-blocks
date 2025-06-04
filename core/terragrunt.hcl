@@ -4,8 +4,5 @@ include {
 
 
 
-terraform {
-  source = "git::https://github.com/digger-external-repos/core.git//?ref=v1.0.0"
-}
 
 
