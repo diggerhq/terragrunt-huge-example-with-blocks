@@ -23,6 +23,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DIGGER_GITHUB_TOKEN: ${{ secrets.DIGGER_GITHUB_TOKEN }}
         INPUT_DRIFT_GITHUB_ISSUES: 'true'
-        INPUT_DRIFT_BLOCK_NAMES_FILTER: "env1"
+        INPUT_DIGGER_BLOCK_FILTERS: "env1"
         # DIGGER_MANAGEMENT_REPO: "https://github.com/diggerhq/mgmt-repo-one"
         DIGGER_LICENSE_KEY: ${{ secrets.DIGGER_LICENSE_KEY }}
