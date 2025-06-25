@@ -1,14 +1,26 @@
 generate_projects:
-  terragrunt_parsing:
-    parallel: true
-    createProjectName: true
-    createWorkspace: true
-    defaultWorkflow: default
-    cascadeDependencies: false 
-workflows:
-  default:
-    plan:
-      steps:
-        - init
-        - plan
-        - run: echo "Terragrunt generation!"
+    blocks:
+      - block_name: core
+        terragrunt: true
+        root_dir: "core/"
+        workflow: default
+      - block_name: env1
+        terragrunt: true
+        root_dir: "env1/"
+        workflow: default
+      - block_name: env2
+        terragrunt: true
+        root_dir: "env2/"
+        workflow: default
+      - block_name: env3
+        terragrunt: true
+        root_dir: "env3/"
+        workflow: default
+      - block_name: env4
+        terragrunt: true
+        root_dir: "env4/"
+        workflow: default
+      - block_name: env5
+        terragrunt: true
+        root_dir: "env5/"
+        workflow: default
