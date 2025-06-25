@@ -15,6 +15,7 @@ jobs:
         ee: 'true'
         mode: drift-detection
         setup-aws: true
+        setup-terragrunt: true
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         no-backend: true
