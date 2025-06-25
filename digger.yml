@@ -6,6 +6,8 @@ generate_projects:
         workflow: default
       - block_name: env1
         terragrunt: true
+        terragrunt_parsing:
+          cascadeDependencies: false         
         root_dir: "env1/"
         workflow: default
       - block_name: env2
