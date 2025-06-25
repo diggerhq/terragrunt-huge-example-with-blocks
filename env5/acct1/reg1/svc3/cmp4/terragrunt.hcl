@@ -11,5 +11,5 @@ dependency "parent" {
 }
 
 terraform {
-  source = "git::https://github.com/diggerhq/digger-external-repos/svc3-cmp4.git//?ref=v1.0.0"
+  source = "git::https://github.com/diggerhq/digger-external-repos.git//svc3-cmp4?ref=v1.0.0"
 }
