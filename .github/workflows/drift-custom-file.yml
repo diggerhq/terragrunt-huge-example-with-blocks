@@ -17,7 +17,7 @@ jobs:
       with:
         ee: 'true'
         mode: drift-detection
-        digger-filename: "digger-drift2.yml"
+        digger-filename: "digger-drift.yml"
         setup-aws: true
         setup-terragrunt: true
         setup-terraform: true
