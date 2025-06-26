@@ -10,19 +10,4 @@ generate_projects:
           cascadeDependencies: false         
         root_dir: "env1/"
         workflow: default
-      - block_name: env2
-        terragrunt: true
-        root_dir: "env2/"
-        workflow: default
-      - block_name: env3
-        terragrunt: true
-        root_dir: "env3/"
-        workflow: default
-      - block_name: env4
-        terragrunt: true
-        root_dir: "env4/"
-        workflow: default
-      - block_name: env5
-        terragrunt: true
-        root_dir: "env5/"
-        workflow: default
+
