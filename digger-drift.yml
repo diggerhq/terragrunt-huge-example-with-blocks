@@ -4,5 +4,5 @@ generate_projects:
         terragrunt: true
         terragrunt_parsing:
           cascadeDependencies: false         
-        root_dir: "env1/"
+          root_dir: "env1/"
         workflow: default
