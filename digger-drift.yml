@@ -1,5 +1,12 @@
 generate_projects:
     blocks:
+      - block_name: core
+        terragrunt: true
+        terragrunt_parsing:
+          cascadeDependencies: false         
+        root_dir: "core/"
+        workflow: default
+    
       - block_name: env2
         terragrunt: true
         terragrunt_parsing:
