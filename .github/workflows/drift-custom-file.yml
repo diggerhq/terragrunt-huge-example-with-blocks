@@ -1,0 +1,34 @@
+name: Drift Detection
+
+on:  
+  workflow_dispatch:
+  #schedule: ## Schedule the job to run at 12.am daily.
+  #  - cron: '0 0 * * *'
+
+jobs:
+  detect-drift:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set git config
+      run: |
+        /usr/bin/git config --global --add url."https://github:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository_owner }}".insteadOf https://github.com/${{ github.repository_owner }}
+    - name: digger drift detection
+      uses: diggerhq/digger@vblocks-test
+      with:
+        ee: 'true'
+        mode: drift-detection
+        digger-filename: "digger-drift.yml"
+        setup-aws: true
+        setup-terragrunt: true
+        setup-terraform: true
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        no-backend: true
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DIGGER_GITHUB_TOKEN: ${{ secrets.DIGGER_GITHUB_TOKEN }}
+        INPUT_DRIFT_GITHUB_ISSUES: 'true'
+        INPUT_DIGGER_BLOCK_FILTERS: "env2"
+        # DIGGER_MANAGEMENT_REPO: "https://github.com/diggerhq/mgmt-repo-one"
+        DIGGER_LICENSE_KEY: ${{ secrets.DIGGER_LICENSE_KEY }}
