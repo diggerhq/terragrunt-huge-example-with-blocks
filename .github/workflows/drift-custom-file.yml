@@ -32,4 +32,4 @@ jobs:
         INPUT_DIGGER_BLOCK_FILTERS: "env2"
         # DIGGER_MANAGEMENT_REPO: "https://github.com/diggerhq/mgmt-repo-one"
         DIGGER_LICENSE_KEY: ${{ secrets.DIGGER_LICENSE_KEY }}
-        DOGGER_LOG_LEVEL: "DEBUG"
+        DIGGER_LOG_LEVEL: "DEBUG"
