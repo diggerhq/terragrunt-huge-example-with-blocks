@@ -9,4 +9,3 @@ dependency "parent" {
   }
   mock_outputs_allowed_terraform_commands = ["init", "plan", "apply", "show"]
 }
-
